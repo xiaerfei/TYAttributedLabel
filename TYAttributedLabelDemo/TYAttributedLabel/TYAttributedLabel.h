@@ -21,7 +21,7 @@
 @end
 
 /**
- *  TYAttributedLabel 属性文本 支持富文本显示，支持添加image和UIView，支持自定义排版
+ *  TYAttributedLabel 属性文本 支持图文混排显示，支持添加image和UIView，支持自定义排版
  */
 @interface TYAttributedLabel : UIView
 
@@ -43,6 +43,11 @@
 @property (nonatomic, assign)   CTLineBreakMode lineBreakMode;      // 换行模式
 
 @property (nonatomic, strong)   TYTextContainer *textContainer;
+
+/**
+ *  Autolayout
+ */
+@property(nonatomic) CGFloat preferredMaxLayoutWidth NS_AVAILABLE_IOS(6_0);
 
 /**
  *  获取普通文本内容
@@ -96,6 +101,7 @@
  *  设置文本位置大小 （自动计算高度，根据宽度）
  */
 - (void)setFrameWithOrign:(CGPoint)orign Width:(CGFloat)width;
+
 
 @end
 

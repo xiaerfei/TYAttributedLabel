@@ -1,30 +1,34 @@
 //
-//  TextTableViewController.m
+//  AutoLayoutTableViewController.m
 //  TYAttributedLabelDemo
 //
-//  Created by tanyang on 15/9/9.
-//  Copyright (c) 2015年 tanyang. All rights reserved.
+//  Created by zhangxinzheng on 10/31/15.
+//  Copyright © 2015 tanyang. All rights reserved.
 //
 
-#import "TextTableViewController.h"
-#import "AttributedLabelCell.h"
+#import "AutoLayoutTableViewController.h"
+#import "AutoLayoutAttributedLabelCell.h"
 #import "RegexKitLite.h"
 
-@interface TextTableViewController ()<TYAttributedLabelDelegate>
+@interface AutoLayoutTableViewController ()<TYAttributedLabelDelegate>
 @property (nonatomic, strong) NSArray *textContainers;
 @end
 
-static NSString *cellId = @"AttributedLabelCell";
+static NSString *cellId = @"AutoLayoutAttributedLabelCell";
 #define RGB(r,g,b,a)	[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-@implementation TextTableViewController
+@implementation AutoLayoutTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[AttributedLabelCell class] forCellReuseIdentifier:cellId];
+    [self.tableView registerClass:[AutoLayoutAttributedLabelCell class] forCellReuseIdentifier:cellId];
     
     [self addTableViewItems];
+    
+    if ([self.tableView respondsToSelector:@selector(setEstimatedRowHeight:)]) {
+        self.tableView.estimatedRowHeight = 40;
+    }
 }
 
 - (void)addTableViewItems
@@ -109,23 +113,24 @@ static NSString *cellId = @"AttributedLabelCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AttributedLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    AutoLayoutAttributedLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
     // Configure the cell...
     cell.label.delegate = self;
     cell.label.textContainer = _textContainers[indexPath.row];
+    
+    // 如果是直接赋值textContainer ，可以不用设置preferredMaxLayoutWidth，因为创建textContainer时，必须传正确的textwidth，即 preferredMaxLayoutWidth
+    cell.label.preferredMaxLayoutWidth = CGRectGetWidth(tableView.frame);
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0) {
+        return UITableViewAutomaticDimension;
+    }
     TYTextContainer *textContaner = _textContainers[indexPath.row];
     return textContaner.textHeight+30;// after createTextContainer, have value
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"点击了cell index:%ld",indexPath.row);
 }
 
 #pragma mark - TYAttributedLabelDelegate
@@ -147,14 +152,5 @@ static NSString *cellId = @"AttributedLabelCell";
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
+

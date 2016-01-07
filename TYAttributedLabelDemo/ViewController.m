@@ -11,10 +11,13 @@
 #import "AttributedTextViewController.h"
 #import "ImageTextViewController.h"
 #import "LinkTextViewController.h"
+#import "AutoLayoutLinkImageTextViewController.h"
 #import "ParseTextViewController.h"
 #import "AddViewTextViewController.h"
 #import "TextContainerViewController.h"
 #import "TextTableViewController.h"
+#import "AutoLayoutTableViewController.h"
+#import "LabelXibViewController.h"
 
 @interface tableViewItem : NSObject
 
@@ -42,7 +45,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     
     [self addTableView];
     
@@ -63,20 +68,29 @@
 - (void)addTableView
 {
     // 添加tableView
-    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    UITableView *tableView = [[UITableView alloc]init];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     self.tableView = tableView;
 }
 
+- (void)viewWillLayoutSubviews
+{
+    self.tableView.frame = self.view.bounds;
+}
+
 - (void)addTableItems
 {
     [self addTableItemWithTitle:@"SimpleText" detailText:@"简单文本显示" destVcClass:[SimpleTextViewController class]];
     
+    [self addTableItemWithTitle:@"XibLabelText" detailText:@"简单文本显示(xib)" destVcClass:[LabelXibViewController class]];
+    
     [self addTableItemWithTitle:@"AttributedText" detailText:@"属性文本显示" destVcClass:[AttributedTextViewController class]];
     
     [self addTableItemWithTitle:@"LinkText" detailText:@"属性链接文本显示" destVcClass:[LinkTextViewController class]];
+    
+    [self addTableItemWithTitle:@"AutoLayoutLinkText" detailText:@"AutoLayout属性链接文本显示" destVcClass:[AutoLayoutLinkImageTextViewController class]];
     
     [self addTableItemWithTitle:@"ImageText" detailText:@"属性文本和Image(URL)混排显示" destVcClass:[ImageTextViewController class]];
     
@@ -87,6 +101,7 @@
     [self addTableItemWithTitle:@"ParseText" detailText:@"自定义排版解析图文混排显示" destVcClass:[ParseTextViewController class]];
     
     [self addTableItemWithTitle:@"AttributedTextCell" detailText:@"tableViewCell显示图文混排" destVcClass:[TextTableViewController class]];
+    [self addTableItemWithTitle:@"AutoLayoutAttributedTextCell" detailText:@"Autolayout tableViewCell显示图文混排" destVcClass:[AutoLayoutTableViewController class]];
     
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5454E5721BE49FEC00722E25 /* AutoLayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5454E5711BE49FEC00722E25 /* AutoLayoutTableViewController.m */; };
+		5454E5751BE4A07800722E25 /* AutoLayoutAttributedLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5454E5741BE4A07800722E25 /* AutoLayoutAttributedLabelCell.m */; };
+		5454E5791BE503C400722E25 /* AutoLayoutLinkImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5454E5781BE503C400722E25 /* AutoLayoutLinkImageTextViewController.m */; };
 		B00F2C6C1B24666500EECDCE /* TYTextContainer+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = B00F2C6B1B24666500EECDCE /* TYTextContainer+Extended.m */; };
 		B0165EF81AE157FA0003D580 /* CYLoLi.png in Resources */ = {isa = PBXBuildFile; fileRef = B0165EF71AE157FA0003D580 /* CYLoLi.png */; };
 		B03135751BA05FCB00D17041 /* AttributedLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B03135741BA05FCB00D17041 /* AttributedLabelCell.m */; };
@@ -14,6 +17,8 @@
 		B034A2A01BE1060B0015130E /* TExamTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B034A29F1BE1060B0015130E /* TExamTextField.m */; };
 		B034A2A31BE115930015130E /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B034A2A21BE115930015130E /* TPKeyboardAvoidingScrollView.m */; };
 		B034A2A61BE115AC0015130E /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B034A2A51BE115AC0015130E /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		B04C45D41C0DC2B70076B8CC /* LabelXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B04C45D21C0DC2B70076B8CC /* LabelXibViewController.m */; };
+		B04C45D51C0DC2B70076B8CC /* LabelXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04C45D31C0DC2B70076B8CC /* LabelXibViewController.xib */; };
 		B0E11A6D1BA05A3A0044523D /* TextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E11A6C1BA05A3A0044523D /* TextTableViewController.m */; };
 		B0E7CF1E1BCE9510000341F4 /* TYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7CF1D1BCE9510000341F4 /* TYImageCache.m */; };
 		D34A49871AD4D5510036B7EF /* TYTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A49861AD4D5510036B7EF /* TYTextStorage.m */; };
@@ -56,6 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5454E5701BE49FEC00722E25 /* AutoLayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutTableViewController.h; sourceTree = "<group>"; };
+		5454E5711BE49FEC00722E25 /* AutoLayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutTableViewController.m; sourceTree = "<group>"; };
+		5454E5731BE4A07800722E25 /* AutoLayoutAttributedLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutAttributedLabelCell.h; sourceTree = "<group>"; };
+		5454E5741BE4A07800722E25 /* AutoLayoutAttributedLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutAttributedLabelCell.m; sourceTree = "<group>"; };
+		5454E5771BE503C400722E25 /* AutoLayoutLinkImageTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutLinkImageTextViewController.h; sourceTree = "<group>"; };
+		5454E5781BE503C400722E25 /* AutoLayoutLinkImageTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutLinkImageTextViewController.m; sourceTree = "<group>"; };
 		B00F2C6B1B24666500EECDCE /* TYTextContainer+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TYTextContainer+Extended.m"; sourceTree = "<group>"; };
 		B0165EF71AE157FA0003D580 /* CYLoLi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CYLoLi.png; sourceTree = "<group>"; };
 		B03135731BA05FCB00D17041 /* AttributedLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedLabelCell.h; sourceTree = "<group>"; };
@@ -68,6 +79,9 @@
 		B034A2A21BE115930015130E /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		B034A2A41BE115AC0015130E /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		B034A2A51BE115AC0015130E /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		B04C45D11C0DC2B70076B8CC /* LabelXibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelXibViewController.h; sourceTree = "<group>"; };
+		B04C45D21C0DC2B70076B8CC /* LabelXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelXibViewController.m; sourceTree = "<group>"; };
+		B04C45D31C0DC2B70076B8CC /* LabelXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelXibViewController.xib; sourceTree = "<group>"; };
 		B0E11A6B1BA05A3A0044523D /* TextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTableViewController.h; sourceTree = "<group>"; };
 		B0E11A6C1BA05A3A0044523D /* TextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewController.m; sourceTree = "<group>"; };
 		B0E7CF1C1BCE9510000341F4 /* TYImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYImageCache.h; sourceTree = "<group>"; };
@@ -154,8 +168,27 @@
 				B034A29F1BE1060B0015130E /* TExamTextField.m */,
 				B03135731BA05FCB00D17041 /* AttributedLabelCell.h */,
 				B03135741BA05FCB00D17041 /* AttributedLabelCell.m */,
+				5454E5731BE4A07800722E25 /* AutoLayoutAttributedLabelCell.h */,
+				5454E5741BE4A07800722E25 /* AutoLayoutAttributedLabelCell.m */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		B0E6E1FF1BE7816A00F6EE0A /* TextStorages */ = {
+			isa = PBXGroup;
+			children = (
+				D34A49851AD4D5510036B7EF /* TYTextStorage.h */,
+				D34A49861AD4D5510036B7EF /* TYTextStorage.m */,
+				D34A498F1AD4FF370036B7EF /* TYLinkTextStorage.h */,
+				D34A49901AD4FF370036B7EF /* TYLinkTextStorage.m */,
+				D34A498C1AD4FA760036B7EF /* TYDrawStorage.h */,
+				D34A498D1AD4FA760036B7EF /* TYDrawStorage.m */,
+				D34A49931AD50EB70036B7EF /* TYImageStorage.h */,
+				D34A49941AD50EB70036B7EF /* TYImageStorage.m */,
+				D34BE7401AD669F000BECD40 /* TYViewStorage.h */,
+				D34BE7411AD669F000BECD40 /* TYViewStorage.m */,
+			);
+			name = TextStorages;
 			sourceTree = "<group>";
 		};
 		D3709F011AD3A5C000145EC6 = {
@@ -190,10 +223,15 @@
 				D3709F151AD3A5C000145EC6 /* ViewController.m */,
 				D35F47C91AE0DAF20048B58A /* SimpleTextViewController.h */,
 				D35F47CA1AE0DAF20048B58A /* SimpleTextViewController.m */,
+				B04C45D11C0DC2B70076B8CC /* LabelXibViewController.h */,
+				B04C45D21C0DC2B70076B8CC /* LabelXibViewController.m */,
+				B04C45D31C0DC2B70076B8CC /* LabelXibViewController.xib */,
 				D35F47CC1AE0DB370048B58A /* AttributedTextViewController.h */,
 				D35F47CD1AE0DB370048B58A /* AttributedTextViewController.m */,
 				D35F47CF1AE0DB500048B58A /* ImageTextViewController.h */,
 				D35F47D01AE0DB500048B58A /* ImageTextViewController.m */,
+				5454E5771BE503C400722E25 /* AutoLayoutLinkImageTextViewController.h */,
+				5454E5781BE503C400722E25 /* AutoLayoutLinkImageTextViewController.m */,
 				D3553BCA1AE732C8005D8F31 /* LinkTextViewController.h */,
 				D3553BCB1AE732C8005D8F31 /* LinkTextViewController.m */,
 				D3553BD31AE79106005D8F31 /* AddViewTextViewController.h */,
@@ -202,6 +240,8 @@
 				B03407401B27049300DCEACB /* TextContainerViewController.m */,
 				B0E11A6B1BA05A3A0044523D /* TextTableViewController.h */,
 				B0E11A6C1BA05A3A0044523D /* TextTableViewController.m */,
+				5454E5701BE49FEC00722E25 /* AutoLayoutTableViewController.h */,
+				5454E5711BE49FEC00722E25 /* AutoLayoutTableViewController.m */,
 				D35F47D21AE0DBE30048B58A /* ParseTextViewController.h */,
 				D35F47D31AE0DBE30048B58A /* ParseTextViewController.m */,
 				D3553BD01AE778DB005D8F31 /* TYTextStorageParser.h */,
@@ -247,26 +287,17 @@
 		D3709F331AD3A5D600145EC6 /* TYAttributedLabel */ = {
 			isa = PBXGroup;
 			children = (
+				B0E6E1FF1BE7816A00F6EE0A /* TextStorages */,
 				D3709F341AD3A60800145EC6 /* TYAttributedLabel.h */,
 				D3709F351AD3A60800145EC6 /* TYAttributedLabel.m */,
+				D34A49921AD505150036B7EF /* TYTextStorageProtocol.h */,
 				D3C623FC1B20348400C15D94 /* TYTextContainer.h */,
 				D3C623FD1B20348400C15D94 /* TYTextContainer.m */,
 				B00F2C6B1B24666500EECDCE /* TYTextContainer+Extended.m */,
 				D3709F411AD3C71900145EC6 /* NSMutableAttributedString+TY.h */,
 				D3709F421AD3C71900145EC6 /* NSMutableAttributedString+TY.m */,
-				D34A49921AD505150036B7EF /* TYTextStorageProtocol.h */,
 				B0E7CF1C1BCE9510000341F4 /* TYImageCache.h */,
 				B0E7CF1D1BCE9510000341F4 /* TYImageCache.m */,
-				D34A49851AD4D5510036B7EF /* TYTextStorage.h */,
-				D34A49861AD4D5510036B7EF /* TYTextStorage.m */,
-				D34A498F1AD4FF370036B7EF /* TYLinkTextStorage.h */,
-				D34A49901AD4FF370036B7EF /* TYLinkTextStorage.m */,
-				D34A498C1AD4FA760036B7EF /* TYDrawStorage.h */,
-				D34A498D1AD4FA760036B7EF /* TYDrawStorage.m */,
-				D34A49931AD50EB70036B7EF /* TYImageStorage.h */,
-				D34A49941AD50EB70036B7EF /* TYImageStorage.m */,
-				D34BE7401AD669F000BECD40 /* TYViewStorage.h */,
-				D34BE7411AD669F000BECD40 /* TYViewStorage.m */,
 			);
 			path = TYAttributedLabel;
 			sourceTree = "<group>";
@@ -356,6 +387,7 @@
 				B0165EF81AE157FA0003D580 /* CYLoLi.png in Resources */,
 				D34A49991AD52D9E0036B7EF /* avatar.png in Resources */,
 				D34A49971AD52D980036B7EF /* haha.png in Resources */,
+				B04C45D51C0DC2B70076B8CC /* LabelXibViewController.xib in Resources */,
 				D3709F1E1AD3A5C000145EC6 /* LaunchScreen.xib in Resources */,
 				D3709F1B1AD3A5C000145EC6 /* Images.xcassets in Resources */,
 			);
@@ -376,10 +408,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35F47DA1AE101880048B58A /* RegexKitLite.m in Sources */,
+				B04C45D41C0DC2B70076B8CC /* LabelXibViewController.m in Sources */,
 				D3709F161AD3A5C000145EC6 /* ViewController.m in Sources */,
 				B03407411B27049300DCEACB /* TextContainerViewController.m in Sources */,
 				D3553BD51AE79106005D8F31 /* AddViewTextViewController.m in Sources */,
+				5454E5791BE503C400722E25 /* AutoLayoutLinkImageTextViewController.m in Sources */,
 				D35F47CE1AE0DB370048B58A /* AttributedTextViewController.m in Sources */,
+				5454E5751BE4A07800722E25 /* AutoLayoutAttributedLabelCell.m in Sources */,
 				D3C623FE1B20348400C15D94 /* TYTextContainer.m in Sources */,
 				D34A49951AD50EB70036B7EF /* TYImageStorage.m in Sources */,
 				D3709F131AD3A5C000145EC6 /* AppDelegate.m in Sources */,
@@ -399,6 +434,7 @@
 				D34A498E1AD4FA760036B7EF /* TYDrawStorage.m in Sources */,
 				D34A49911AD4FF370036B7EF /* TYLinkTextStorage.m in Sources */,
 				D3709F361AD3A60800145EC6 /* TYAttributedLabel.m in Sources */,
+				5454E5721BE49FEC00722E25 /* AutoLayoutTableViewController.m in Sources */,
 				D35F47CB1AE0DAF20048B58A /* SimpleTextViewController.m in Sources */,
 				B0E11A6D1BA05A3A0044523D /* TextTableViewController.m in Sources */,
 				D3553BCC1AE732C8005D8F31 /* LinkTextViewController.m in Sources */,
@@ -477,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -513,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -78,6 +78,7 @@
 {
     TYImageStorage *imageStorage = [[TYImageStorage alloc]init];
     imageStorage.imageName = dic[@"name"];
+    imageStorage.imageAlignment = TYImageAlignmentRight;
     imageStorage.size = CGSizeMake([dic[@"width"] doubleValue], [dic[@"height"] doubleValue]);
     
     return imageStorage;

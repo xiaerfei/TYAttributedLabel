@@ -12,6 +12,7 @@
 
 @interface ImageTextViewController ()<TYAttributedLabelDelegate>
 @property (nonatomic,weak) TYAttributedLabel *label1;
+@property (nonatomic,weak) TYAttributedLabel *label2;
 @property (nonatomic, weak) UIScrollView *scrollView;
 @end
 
@@ -86,6 +87,27 @@
     imageStorage.size = CGSizeMake(15, 15);
     [label appendTextStorage:imageStorage];
     
+    [label appendText:@"image左对齐"];
+    TYImageStorage *imageStorageAlignLeft = [[TYImageStorage alloc]init];
+    imageStorageAlignLeft.imageName = @"CYLoLi";
+    imageStorageAlignLeft.imageAlignment = TYImageAlignmentLeft;
+    imageStorageAlignLeft.size = CGSizeMake(CGRectGetWidth(self.view.frame), 100);
+    [label appendTextStorage:imageStorageAlignLeft];
+    
+    [label appendText:@"image居中对齐"];
+    TYImageStorage *imageStorageAlignCenter = [[TYImageStorage alloc]init];
+    imageStorageAlignCenter.imageName = @"CYLoLi";
+    imageStorageAlignCenter.imageAlignment = TYImageAlignmentCenter;
+    imageStorageAlignCenter.size = CGSizeMake(CGRectGetWidth(self.view.frame), 100);
+    [label appendTextStorage:imageStorageAlignCenter];
+    
+    [label appendText:@"image右对齐"];
+    TYImageStorage *imageStorageAlignRight = [[TYImageStorage alloc]init];
+    imageStorageAlignRight.imageName = @"CYLoLi";
+    imageStorageAlignRight.imageAlignment = TYImageAlignmentRight;
+    imageStorageAlignRight.size = CGSizeMake(CGRectGetWidth(self.view.frame), 100);
+    [label appendTextStorage:imageStorageAlignRight];
+    
     [label sizeToFit];
 }
 
@@ -97,7 +119,7 @@
     TYAttributedLabel *label = [[TYAttributedLabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_label1.frame) + 20, CGRectGetWidth(self.view.frame), 0)];
     [_scrollView addSubview:label];
     label.delegate = self;
-    NSString *text = [NSString stringWithFormat:@"[CYLoLi,%d,180]其实所有漂泊的人，[haha,15,15]不过是为了有一天能够不再漂泊，[haha,15,15]能用自己的力量撑起身后的家人和自己爱的人。[avatar,60,60]",(int)CGRectGetWidth(self.view.frame)];
+    NSString *text = [NSString stringWithFormat:@"[CYLoLi,%d,180]其实所有漂泊的人，[haha,15,15]不过是为了有一天能够不再[CYLoLi,%d,90]漂泊，[haha,15,15]能用自己的力量撑起身后的家人和自己爱的人。[avatar,60,60]",(int)CGRectGetWidth(self.view.frame),(int)CGRectGetWidth(self.view.frame)/2];
     
     // 属性文本生成器
     TYTextContainer *attStringCreater = [[TYTextContainer alloc]init];
@@ -138,6 +160,8 @@
     [label setTextContainer:attStringCreater];
     
     [label sizeToFit];
+    
+    _label2 = label;
     
     [_scrollView setContentSize:CGSizeMake(0, CGRectGetMaxY(label.frame)+10)];
 }
