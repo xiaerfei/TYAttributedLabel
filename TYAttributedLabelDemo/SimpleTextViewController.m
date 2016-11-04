@@ -29,7 +29,7 @@
     label1.linesSpacing = 2;
     
     label1.lineBreakMode = kCTLineBreakByTruncatingTail;
-    label1.numberOfLines = 2;
+    label1.numberOfLines = 1;
     // 文本字体
     label1.font = [UIFont systemFontOfSize:17];
     
@@ -56,7 +56,7 @@
     // 宽度自适应
     label2.isWidthToFit = YES;
     // 自适应高度
-    //[label2 sizeToFit];
+    [label2 sizeToFit];
     
     // label 垂直对齐方式
     // top text(default)
@@ -97,6 +97,34 @@
     label5.linesSpacing = 2;
     
     [self.view addSubview:label5];
+    
+    TYAttributedLabel *label6 = [[TYAttributedLabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(label5.frame)+10, CGRectGetWidth(self.view.frame), 80)];
+    label6.text = @"center text";
+    label6.backgroundColor = [UIColor lightGrayColor];
+    // 水平对齐方式
+    label6.textAlignment = kCTTextAlignmentCenter;
+    // 垂直对齐方式
+    label6.verticalAlignment = TYVerticalAlignmentCenter;
+    // 文字间隙
+    label6.characterSpacing = 2;
+    // 文本行间隙
+    label6.linesSpacing = 2;
+    
+    [self.view addSubview:label6];
+    
+    TYAttributedLabel *label7 = [[TYAttributedLabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(label6.frame)+10, CGRectGetWidth(self.view.frame), 80)];
+    label7.text = @"right text";
+    label7.backgroundColor = [UIColor lightGrayColor];
+    // 水平对齐方式
+    label7.textAlignment = kCTTextAlignmentRight;
+    // 垂直对齐方式
+    label7.verticalAlignment = TYVerticalAlignmentCenter;
+    // 文字间隙
+    label7.characterSpacing = 2;
+    // 文本行间隙
+    label7.linesSpacing = 2;
+    
+    [self.view addSubview:label7];
 }
 
 - (void)didReceiveMemoryWarning {
